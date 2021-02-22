@@ -22,7 +22,7 @@ namespace EquazioneLibrary
                 return false;
 
         }
-        public static bool IsDegree2(double esponente, double a, )
+        public static bool IsDegree2(double esponente, double a)
         {
             if (esponente == 2 && a != 0)
             {
@@ -30,6 +30,11 @@ namespace EquazioneLibrary
             }
             else
                 return false;
+        }
+        public static double Delta(double b, double a, double c)
+        {
+            double delta = (b * b) - (4 * a * c);
+            return delta;
         }
     }
 }

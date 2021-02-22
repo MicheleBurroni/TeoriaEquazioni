@@ -7,7 +7,7 @@ namespace EquazioniLibrary.Test
     public class UnitTest1
     {
         [TestMethod]
-        public void EquazioneprimogradoDeterminata()
+        public void EquazionePrimogradoDeterminata()
         {
             double a = 11;
             bool valoreAspettato = true;
@@ -30,6 +30,13 @@ namespace EquazioniLibrary.Test
             bool valoreRitorno = Equazioni.IsInconsisted(esponente, a);
             Assert.AreEqual(valoreAspettato, valoreRitorno);
         }
-
+        [TestMethod]
+        public void CalcoloDelta()
+        {
+            double b = 6, a = 12, c = 7;
+            bool valoreAspettato = true;
+            double valoreRitorno = Equazioni.Delta(b, a, c);
+            Assert.AreEqual(valoreAspettato, valoreRitorno);
+        }
     }
 }
