@@ -23,7 +23,7 @@ namespace EquazioniLibrary.Test
             Assert.AreEqual(valoreAspettato, valoreRitorno);
         }
         [TestMethod]
-        public void EquazioneDiSecondogrado()
+        public void EquazioneDiSecondoGrado()
         {
             double esponente = 2, a = 4;
             bool valoreAspettato = true;
@@ -34,8 +34,16 @@ namespace EquazioniLibrary.Test
         public void CalcoloDelta()
         {
             double b = 6, a = 12, c = 7;
-            bool valoreAspettato = true;
+            double valoreAspettato = 300;
             double valoreRitorno = Equazioni.Delta(b, a, c);
+            Assert.AreEqual(valoreAspettato, valoreRitorno);
+        }
+        [TestMethod]
+        public void SoluzioniEquazioneDiSecondoGrado()
+        {
+            double a = 1, b = 5, c = 6;
+            string valoreAspettato = $"{2}, {-8}";
+            string valoreRitorno = Equazioni.Soluzioni(a, b, c);
             Assert.AreEqual(valoreAspettato, valoreRitorno);
         }
     }
