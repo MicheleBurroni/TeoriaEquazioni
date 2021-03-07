@@ -46,5 +46,29 @@ namespace EquazioniLibrary.Test
             string valoreRitorno = Equazioni.Soluzioni(a, b, c);
             Assert.AreEqual(valoreAspettato, valoreRitorno);
         }
+        [TestMethod]
+        public void Eq1GradoIndeterminata()
+        {
+            double a = 0, b = 0;
+            string valoreAspettato = "Indeterminato";
+            string valoreRitorno = Equazioni.EquationDegree1(a, b);
+            Assert.AreEqual(valoreAspettato, valoreRitorno);
+        }
+        [TestMethod]
+        public void Eq1GradoImpossibile()
+        {
+            double a = 0, b = 11;
+            string valoreAspettato = $"Impossibile";
+            string valoreRitorno = Equazioni.EquationDegree1(a, b);
+            Assert.AreEqual(valoreAspettato, valoreRitorno);
+        }
+        [TestMethod]
+        public void Eq1GradoSoluzione()
+        {
+            double a = 4, b = 28;
+            string valoreAspettato = $"{7}";
+            string valoreRitorno = Equazioni.EquationDegree1(a, b);
+            Assert.AreEqual(valoreAspettato, valoreRitorno);
+        }
     }
 }
